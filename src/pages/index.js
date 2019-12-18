@@ -1,12 +1,13 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Img from "gatsby-image"
+// import Img from "gatsby-image"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Scroller from "../components/scroller"
 import PortfolioModal from "../components/portfolio/modal"
 import PortfolioCarousel from "../components/portfolio/carousel"
+import "../css/index.css"
 
 export default class IndexPage extends React.Component {
   constructor(props) {
@@ -36,62 +37,75 @@ export default class IndexPage extends React.Component {
     return (
       <Layout>
         <SEO title="Home"/>
-        <section className="page-section bg-primary" id="about">
+        <section className="page-section bg-primary" id="resume">
           <div className="container">
             <div className="row justify-content-center">
-              <div className="col-lg-8 text-center">
-                <h2 className="text-white mt-0">We've got what you need!</h2>
+              <div className="col-lg-8 ">
+                <h5 className=" mt-0 resume-section">From a strong foundation in computer science and technical analysis</h5>
                 <hr className="divider light my-4"/>
-                <p className="text-white-50 mb-4">Start Bootstrap has everything you need to get your new website up
-                  and
-                  running in no time! Choose one of our open source, free to download, and easy to use themes! No
-                  strings
-                  attached!</p>
-                <a className="btn btn-light btn-xl js-scroll-trigger" href="#services"
-                   onClick={Scroller.handleAnchorScroll}>Get Started!</a>
+                <ul class="list-unstyled">
+                  <p className="d-flex resume-item">Educated in programming and computer science theory at Princeton University</p>
+                  <li className="resume-detail">
+                  <div className="resume-checkmark">&#10003;</div><p >Earned Degree in Operations Research and Financial Engineering</p>
+                  </li>
+                  <li className="resume-detail">
+                  <div className="resume-checkmark">&#10003;</div><p >Earned Certificate in Computer Science</p>
+                  </li>
+                </ul>
+                <ul class="list-unstyled">
+                  <p className="d-flex resume-item">Experienced technically and professionally through banking at Barclays Capital</p>
+                  <li className="resume-detail">
+                  <div className="resume-checkmark">&#10003;</div><p >Executed 20+ deals and led technical side of transactions, including process management and product delivery</p>
+                  </li>
+                  <li className="resume-detail">
+                  <div className="resume-checkmark">&#10003;</div><p >Educated 5+ clients on esoteric structured products, demonstrating deep understanding of complex concepts</p>
+                  </li>
+                </ul>
+                <a className="btn js-scroll-trigger resume-button" href="#projects"
+                   onClick={Scroller.handleAnchorScroll}>Development Projects!</a>
               </div>
             </div>
           </div>
         </section>
 
-        <section className="page-section" id="services">
+        <section className="page-section" id="projects">
           <div className="container">
-            <h2 className="text-center mt-0">At Your Service</h2>
+            <h5 className="project-section mt-0">Demonstrating ability through personally motivated projects and study</h5>
             <hr className="divider my-4"/>
             <div className="row">
               <div className="col-lg-3 col-md-6 text-center">
                 <div className="mt-5">
                   <i className="fas fa-4x fa-gem text-primary mb-4"></i>
-                  <h3 className="h4 mb-2">Sturdy Themes</h3>
-                  <p className="text-muted mb-0">Our themes are updated regularly to keep them bug free!</p>
+                  <h3 className="h4 mb-2">Pathfinding Algorithm Visualizer</h3>
+                  <p className="text-muted mb-0">An application for finding a path from A to B - React / Node</p>
                 </div>
               </div>
               <div className="col-lg-3 col-md-6 text-center">
                 <div className="mt-5">
                   <i className="fas fa-4x fa-laptop-code text-primary mb-4"></i>
-                  <h3 className="h4 mb-2">Up to Date</h3>
-                  <p className="text-muted mb-0">All dependencies are kept current to keep things fresh.</p>
+                  <h3 className="h4 mb-2">Queryable News Digest</h3>
+                  <p className="text-muted mb-0">A news digest pulling custom content from NewsAPI.org - Go</p>
                 </div>
               </div>
               <div className="col-lg-3 col-md-6 text-center">
                 <div className="mt-5">
                   <i className="fas fa-4x fa-globe text-primary mb-4"></i>
-                  <h3 className="h4 mb-2">Ready to Publish</h3>
-                  <p className="text-muted mb-0">You can use this design as is, or you can make changes!</p>
+                  <h3 className="h4 mb-2">Sorting Algorithm Visualizer</h3>
+                  <p className="text-muted mb-0">An application for simple sort of an array - React / Node</p>
                 </div>
               </div>
               <div className="col-lg-3 col-md-6 text-center">
                 <div className="mt-5">
                   <i className="fas fa-4x fa-heart text-primary mb-4"></i>
-                  <h3 className="h4 mb-2">Made with Love</h3>
-                  <p className="text-muted mb-0">Is it really open source if it's not made with love?</p>
+                  <h3 className="h4 mb-2">A Future for American Mobility</h3>
+                  <p className="text-muted mb-0">Princeton Thesis on network optimization - Matlab / Bash</p>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        <section id="portfolio">
+        {/* <section id="projects">
           <div className="container-fluid p-0">
             <div className="row no-gutters">
               <div className="col-lg-4 col-sm-6">
@@ -174,34 +188,33 @@ export default class IndexPage extends React.Component {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
-        <section className="page-section bg-dark text-white">
+        {/* <section className="page-section bg-dark text-white">
           <div className="container text-center">
             <h2 className="mb-4">Free Download at Start Bootstrap!</h2>
             <a className="btn btn-light btn-xl" href="https://startbootstrap.com/themes/creative/">Download Now!</a>
           </div>
-        </section>
+        </section> */}
 
         <section className="page-section" id="contact">
           <div className="container">
             <div className="row justify-content-center">
               <div className="col-lg-8 text-center">
-                <h2 className="mt-0">Let's Get In Touch!</h2>
+                <h2 className="mt-0">Let's Connect!</h2>
                 <hr className="divider my-4"/>
-                <p className="text-muted mb-5">Ready to start your next project with us? Give us a call or send us an
-                  email
-                  and we will get back to you as soon as possible!</p>
+                <p className="text-muted mb-5">I am looking for opportunities to build a career in 
+                software engineering at a company that creates positive change through smart engineering.</p>
               </div>
             </div>
             <div className="row">
               <div className="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
                 <i className="fas fa-phone fa-3x mb-3 text-muted"></i>
-                <div>+1 (202) 555-0149</div>
+                <div>+1 (973) 975-8660</div>
               </div>
               <div className="col-lg-4 mr-auto text-center">
                 <i className="fas fa-envelope fa-3x mb-3 text-muted"></i>
-                <a className="d-block" href="mailto:contact@yourwebsite.com">contact@yourwebsite.com</a>
+                <a className="d-block" href="mailto:sbutton@alumni.princeton.edu">sbutton@alumni.princeton.edu</a>
               </div>
             </div>
           </div>

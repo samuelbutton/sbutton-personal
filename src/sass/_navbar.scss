@@ -10,11 +10,11 @@
 	}
 	.navbar-nav {
 		.nav-item {
-			&.active {
-				.nav-link {
-					color: $primary !important;
-				}
-			}
+			// &.active {
+			// 	.nav-link {
+			// 		color: $primary !important;
+			// 	}
+			// }
 
 			.nav-link {
 				color: $gray-600;
@@ -31,21 +31,21 @@
 	}
 	@include media-breakpoint-up(lg) {
 		// Base styling for the navbar - screen sizes greater than the large breakpoint
-		box-shadow: none;
-		background-color: transparent;
+		box-shadow: $box-shadow;
+		background-color: $white;
 		.navbar-brand {
-			color: fade-out($white, .3);
+			color: $gray-900;
 			&:hover {
-				color: $white;
+				color: $primary;
 			}
 		}
 		.navbar-nav {
 			.nav-item {
 				.nav-link {
-					color: fade-out($white, .3);
+					color: $gray-900;
 					padding: 0 1rem;
 					&:hover {
-						color: $white;
+						color: $primary;
 					}
 				}
 				&:last-child {
