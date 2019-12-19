@@ -7,7 +7,6 @@ import SEO from "../components/seo"
 import Scroller from "../components/scroller"
 import PortfolioModal from "../components/portfolio/modal"
 import PortfolioCarousel from "../components/portfolio/carousel"
-import "../css/index.css"
 
 export default class IndexPage extends React.Component {
   constructor(props) {
@@ -33,6 +32,12 @@ export default class IndexPage extends React.Component {
     });
   }
 
+  thesisLink = "https://dataspace.princeton.edu/jspui/handle/88435/dsp01ft848t351";
+  sortingLink = "https://sbutton-sorting.herokuapp.com/";
+  pathfindingLink = "https://sbutton-pathfinding.herokuapp.com/";
+  newsLink = "https://sbutton-news.herokuapp.com/";
+  githubLink = "https://github.com/scbutton95";
+
   render() {
     return (
       <Layout>
@@ -46,23 +51,25 @@ export default class IndexPage extends React.Component {
                 <ul class="list-unstyled">
                   <p className="d-flex resume-item">Educated in programming and computer science theory at Princeton University</p>
                   <li className="resume-detail">
-                  <div className="resume-checkmark">&#10003;</div><p >Earned Degree in Operations Research and Financial Engineering</p>
+                  <div className="resume-checkmark">&#10003;</div><div className="resume-inline-block">Earned Degree in Operations Research and Financial Engineering</div>
                   </li>
                   <li className="resume-detail">
-                  <div className="resume-checkmark">&#10003;</div><p >Earned Certificate in Computer Science</p>
+                  <div className="resume-checkmark">&#10003;</div><div className="resume-inline-block">Earned Certificate in Computer Science</div>
                   </li>
                 </ul>
                 <ul class="list-unstyled">
                   <p className="d-flex resume-item">Experienced technically and professionally through banking at Barclays Capital</p>
                   <li className="resume-detail">
-                  <div className="resume-checkmark">&#10003;</div><p >Executed 20+ deals and led technical side of transactions, including process management and product delivery</p>
+                  <div className="resume-checkmark">&#10003;</div><div className="resume-inline-block">Executed 20+ deals and led technical side of transactions, including process management and product delivery</div>
                   </li>
                   <li className="resume-detail">
-                  <div className="resume-checkmark">&#10003;</div><p >Educated 5+ clients on esoteric structured products, demonstrating deep understanding of complex concepts</p>
+                  <div className="resume-checkmark">&#10003;</div><div className="resume-inline-block">Educated 5+ clients on esoteric structured products, demonstrating deep understanding of complex concepts</div>
                   </li>
                 </ul>
-                <a className="btn js-scroll-trigger resume-button" href="#projects"
-                   onClick={Scroller.handleAnchorScroll}>Development Projects!</a>
+                <div className="button-container">
+                  <a className="btn js-scroll-trigger resume-button" href="#projects"
+                      onClick={Scroller.handleAnchorScroll}>Development Projects!</a>
+                </div>
               </div>
             </div>
           </div>
@@ -75,32 +82,35 @@ export default class IndexPage extends React.Component {
             <div className="row">
               <div className="col-lg-3 col-md-6 text-center">
                 <div className="mt-5">
-                  <i className="fas fa-4x fa-gem text-primary mb-4"></i>
+                <a target="_blank" rel="noopener noreferrer" href={this.pathfindingLink}><i className="fas fa-4x fa-wave-square text-primary mb-4"></i></a>
                   <h3 className="h4 mb-2">Pathfinding Algorithm Visualizer</h3>
-                  <p className="text-muted mb-0">An application for finding a path from A to B - React / Node</p>
+                  <a className="text-muted mb-0" target="_blank" rel="noopener noreferrer" href={this.pathfindingLink}>An application for finding a path from A to B - React&nbsp;/&nbsp;Node</a>
                 </div>
               </div>
               <div className="col-lg-3 col-md-6 text-center">
                 <div className="mt-5">
-                  <i className="fas fa-4x fa-laptop-code text-primary mb-4"></i>
+                  <a target="_blank" rel="noopener noreferrer" href={this.newsLink}><i className="fas fa-4x fa-newspaper text-primary mb-4"></i></a>
                   <h3 className="h4 mb-2">Queryable News Digest</h3>
-                  <p className="text-muted mb-0">A news digest pulling custom content from NewsAPI.org - Go</p>
+                  <a className="text-muted mb-0" target="_blank" rel="noopener noreferrer" href={this.newsLink}>A news digest pulling custom content from NewsAPI.org - Go</a>
                 </div>
               </div>
               <div className="col-lg-3 col-md-6 text-center">
                 <div className="mt-5">
-                  <i className="fas fa-4x fa-globe text-primary mb-4"></i>
+                <a target="_blank" rel="noopener noreferrer" href={this.sortingLink}><i className="fas fa-4x fa-chart-bar text-primary mb-4"></i></a>
                   <h3 className="h4 mb-2">Sorting Algorithm Visualizer</h3>
-                  <p className="text-muted mb-0">An application for simple sort of an array - React / Node</p>
+                  <a className="text-muted mb-0" target="_blank" rel="noopener noreferrer" href={this.sortingLink}>An application for simple sort of an array - React&nbsp;/&nbsp;Node</a>
                 </div>
               </div>
               <div className="col-lg-3 col-md-6 text-center">
                 <div className="mt-5">
-                  <i className="fas fa-4x fa-heart text-primary mb-4"></i>
+                  <a target="_blank" rel="noopener noreferrer" href={this.thesisLink}><i className="fas fa-4x fa-car text-primary mb-4"/></a>
                   <h3 className="h4 mb-2">A Future for American Mobility</h3>
-                  <p className="text-muted mb-0">Princeton Thesis on network optimization - Matlab / Bash</p>
+                  <a className="text-muted mb-0" target="_blank" rel="noopener noreferrer" href={this.thesisLink}>Princeton Thesis on network optimization - Matlab&nbsp;/&nbsp;Bash</a>
                 </div>
               </div>
+                <div className="button-container col-lg-12">
+                  <a className="btn project-button" target="_blank" rel="noopener noreferrer" href={this.githubLink}>View on Github</a>
+                </div>
             </div>
           </div>
         </section>
@@ -203,18 +213,18 @@ export default class IndexPage extends React.Component {
               <div className="col-lg-8 text-center">
                 <h2 className="mt-0">Let's Connect!</h2>
                 <hr className="divider my-4"/>
-                <p className="text-muted mb-5">I am looking for opportunities to build a career in 
+                <p className=" mb-5">I am looking for opportunities to build a career in 
                 software engineering at a company that creates positive change through smart engineering.</p>
               </div>
             </div>
             <div className="row">
               <div className="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
-                <i className="fas fa-phone fa-3x mb-3 text-muted"></i>
+                <i className="fas fa-phone fa-3x mb-3 "></i>
                 <div>+1 (973) 975-8660</div>
               </div>
               <div className="col-lg-4 mr-auto text-center">
-                <i className="fas fa-envelope fa-3x mb-3 text-muted"></i>
-                <a className="d-block" href="mailto:sbutton@alumni.princeton.edu">sbutton@alumni.princeton.edu</a>
+                <i className="fas fa-envelope fa-3x mb-3"></i>
+                <a className="d-block" id="email-link" href="mailto:sbutton@alumni.princeton.edu">sbutton@alumni.princeton.edu</a>
               </div>
             </div>
           </div>

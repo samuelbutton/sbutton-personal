@@ -1,10 +1,3 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from "react"
 import PropTypes from "prop-types"
 import Header from "./header"
@@ -60,11 +53,6 @@ export default class Layout extends React.Component {
         id="page-top">
         <Header/>
         <main>{this.props.children}</main>
-        {/* <footer className="bg-light py-5">
-          <div className="container">
-            <div className="small text-center text-muted">Copyright &copy; 2019 - Start Bootstrap</div>
-          </div>
-        </footer> */}
       </div>
     )
   }
