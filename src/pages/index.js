@@ -32,11 +32,11 @@ export default class IndexPage extends React.Component {
     });
   }
 
-  thesisLink = "https://dataspace.princeton.edu/jspui/handle/88435/dsp01ft848t351";
-  sortingLink = "https://sbutton-sorting.herokuapp.com/";
-  pathfindingLink = "https://sbutton-pathfinding.herokuapp.com/";
+  bookshelfLink = "https://sbutton-bookshelf.herokuapp.com/";
+  sortingLink = "https://sbutton-sorting.netlify.com/";
+  pathfindingLink = "https://sbutton-pathfinding.netlify.com/";
   newsLink = "https://sbutton-news.herokuapp.com/";
-  githubLink = "https://github.com/scbutton95";
+  githubLink = "https://github.com/samuelbutton";
 
   render() {
     return (
@@ -81,6 +81,13 @@ export default class IndexPage extends React.Component {
             <hr className="divider my-4"/>
             <div className="row">
               <div className="col-lg-3 col-md-6 text-center">
+                  <div className="mt-5">
+                    <a target="_blank" rel="noopener noreferrer" href={this.bookshelfLink}><i className="fas fa-4x fa-book text-primary mb-4"/></a>
+                    <h3 className="h4 mb-2">Personal Bookshelf</h3>
+                    <a className="text-muted mb-0" target="_blank" rel="noopener noreferrer" href={this.bookshelfLink}>An application to store a personal bookshelf - Go&nbsp;/&nbsp;PostgreSQL&nbsp;/&nbsp;GCP</a>
+                  </div>
+                </div>
+              <div className="col-lg-3 col-md-6 text-center">
                 <div className="mt-5">
                 <a target="_blank" rel="noopener noreferrer" href={this.pathfindingLink}><i className="fas fa-4x fa-wave-square text-primary mb-4"></i></a>
                   <h3 className="h4 mb-2">Pathfinding Algorithm Visualizer</h3>
@@ -101,111 +108,13 @@ export default class IndexPage extends React.Component {
                   <a className="text-muted mb-0" target="_blank" rel="noopener noreferrer" href={this.sortingLink}>An application for simple sort of an array - React&nbsp;/&nbsp;Node</a>
                 </div>
               </div>
-              <div className="col-lg-3 col-md-6 text-center">
-                <div className="mt-5">
-                  <a target="_blank" rel="noopener noreferrer" href={this.thesisLink}><i className="fas fa-4x fa-car text-primary mb-4"/></a>
-                  <h3 className="h4 mb-2">A Future for American Mobility</h3>
-                  <a className="text-muted mb-0" target="_blank" rel="noopener noreferrer" href={this.thesisLink}>Princeton Thesis on network optimization - Matlab&nbsp;/&nbsp;Bash</a>
-                </div>
-              </div>
+              
                 <div className="button-container col-lg-12">
                   <a className="btn project-button" target="_blank" rel="noopener noreferrer" href={this.githubLink}>View on Github</a>
                 </div>
             </div>
           </div>
         </section>
-
-        {/* <section id="projects">
-          <div className="container-fluid p-0">
-            <div className="row no-gutters">
-              <div className="col-lg-4 col-sm-6">
-                <a className="portfolio-box" href="img/portfolio/fullsize/1.jpg" onClick={this.handlePortfolioClick.bind(this, 0)}>
-                  <Img fluid={this.props.data.images.edges[0].node.childImageSharp.fluid}/>
-                  <div className="portfolio-box-caption">
-                    <div className="project-category text-white-50">
-                      Category
-                    </div>
-                    <div className="project-name">
-                      Project Name
-                    </div>
-                  </div>
-                </a>
-              </div>
-              <div className="col-lg-4 col-sm-6">
-                <a className="portfolio-box" href="img/portfolio/fullsize/2.jpg" onClick={this.handlePortfolioClick.bind(this, 1)}>
-                  <Img fluid={this.props.data.images.edges[1].node.childImageSharp.fluid}/>
-                  <div className="portfolio-box-caption">
-                    <div className="project-category text-white-50">
-                      Category
-                    </div>
-                    <div className="project-name">
-                      Project Name
-                    </div>
-                  </div>
-                </a>
-              </div>
-              <div className="col-lg-4 col-sm-6">
-                <a className="portfolio-box" href="img/portfolio/fullsize/3.jpg" onClick={this.handlePortfolioClick.bind(this, 2)}>
-                  <Img fluid={this.props.data.images.edges[2].node.childImageSharp.fluid}/>
-                  <div className="portfolio-box-caption">
-                    <div className="project-category text-white-50">
-                      Category
-                    </div>
-                    <div className="project-name">
-                      Project Name
-                    </div>
-                  </div>
-                </a>
-              </div>
-              <div className="col-lg-4 col-sm-6">
-                <a className="portfolio-box" href="images/portfolio/fullsize/4.jpg" onClick={this.handlePortfolioClick.bind(this, 3)}>
-                  <Img fluid={this.props.data.images.edges[3].node.childImageSharp.fluid}/>
-                  <div className="portfolio-box-caption">
-                    <div className="project-category text-white-50">
-                      Category
-                    </div>
-                    <div className="project-name">
-                      Project Name
-                    </div>
-                  </div>
-                </a>
-              </div>
-              <div className="col-lg-4 col-sm-6">
-                <a className="portfolio-box" href="img/portfolio/fullsize/5.jpg" onClick={this.handlePortfolioClick.bind(this, 4)}>
-                  <Img fluid={this.props.data.images.edges[4].node.childImageSharp.fluid}/>
-                  <div className="portfolio-box-caption">
-                    <div className="project-category text-white-50">
-                      Category
-                    </div>
-                    <div className="project-name">
-                      Project Name
-                    </div>
-                  </div>
-                </a>
-              </div>
-              <div className="col-lg-4 col-sm-6">
-                <a className="portfolio-box" href="img/portfolio/fullsize/6.jpg" onClick={this.handlePortfolioClick.bind(this, 5)}>
-                  <Img fluid={this.props.data.images.edges[5].node.childImageSharp.fluid}/>
-                  <div className="portfolio-box-caption p-3">
-                    <div className="project-category text-white-50">
-                      Category
-                    </div>
-                    <div className="project-name">
-                      Project Name
-                    </div>
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
-        </section> */}
-
-        {/* <section className="page-section bg-dark text-white">
-          <div className="container text-center">
-            <h2 className="mb-4">Free Download at Start Bootstrap!</h2>
-            <a className="btn btn-light btn-xl" href="https://startbootstrap.com/themes/creative/">Download Now!</a>
-          </div>
-        </section> */}
 
         <section className="page-section" id="contact">
           <div className="container">
